@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pan-Masal Dukaan - आपका नाम</title>
+  <link rel="stylesheet" href="stye.css">
+  <style>
+    :root{--accent:#b33;--muted:#666;--card:#fff;--bg:#faf7f0}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans',Arial; margin:0; background:var(--bg); color:#222}
+    header{background:linear-gradient(90deg,#fff 0 60%, rgba(179,51,51,0.06) 60%);padding:22px 18px;display:flex;align-items:center;gap:16px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo img{width:72px;height:72px;object-fit:cover;border-radius:10px;border:3px solid rgba(0,0,0,0.06)}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+    .container{max-width:980px;margin:22px auto;padding:0 18px}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:center}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(20,20,20,0.06)}
+    .intro h2{margin:0 0 8px;font-size:22px;color:var(--accent)}
+    .intro p{margin:0;color:var(--muted)}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .product{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fff);display:flex;gap:12px;align-items:center}
+    .product img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+    .product h4{margin:0;font-size:16px}
+    .price{color:var(--muted);font-size:13px}
+
+    .right-col .photo{width:100%;height:100%;border-radius:10px;overflow:hidden}
+    .right-col img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .contact form{display:flex;flex-direction:column;gap:8px}
+    input,textarea,button{padding:10px;border-radius:8px;border:1px solid #e6e4e1}
+    button{background:var(--accent);color:#fff;border:none;padding:12px;font-weight:600;cursor:pointer}
+
+    footer{margin:30px 0;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .right-col{order:-1}
+      .contact{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!--
+    Usage:
+    1) Save this file as pan-masal-shop.html
+    2) Put your photo in the same folder and name it `your-photo.jpg` OR change the src in the <img> below.
+    3) Open the HTML file in a browser.
+    Need Hindi text, different colors, or e-commerce features? Tell me and I'll update.
+  -->
+
+  <header>
+    <div class="logo">
+      <!-- Replace 'your-photo.jpg' with your real photo file name -->
+      <img src="RKW_6289.JPG" alt="Owner Photo" id="owner-photo" onerror="this.src='https://via.placeholder.com/72?text=Photo'" />
+      <div>
+        <h1>गप्पू की पान मसाला दूकान</h1>
+        <p class="lead">ताज़ा पान • मसाले • थोक और रिटेल</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card intro">
+        <h2>स्वागत है — सबसे भरोसेमंद पान मसाला</h2>
+        <p>हम देसी और ब्रांडेड पान मसाले, सूरतियां और चुनिंदा मिक्स बेचते हैं। ताजगी की गारंटी और लोकल डिलीवरी उपलब्ध।</p>
+
+        <div class="products" style="margin-top:16px">
+          <div class="product">
+            <img src="download.jpg" alt="Product 1" onerror="this.src='https://via.placeholder.com/64'" />
+            <div>
+              <h4>ब्रांडेड पान मसाला</h4>
+              <div class="price">40 bada rajshree</div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="download (3).jpg" alt="Product 2" onerror="this.src='https://via.placeholder.com/64'" />
+            <div>
+              <h4>खास मिक्स</h4>
+              <div class="price"> पैकेट</div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="images.jpg" alt="Product 3" onerror="this.src='https://via.placeholder.com/64'" />
+            <div>
+              <h4>थोक ऑफर</h4>
+              <div class="price">बड़ी मात्रा पर डिस्काउंट</div>
+            </div>
+          </div>  <div class="product">
+            <img src="download (1).jpg" alt="Rajshree" onerror="this.src='https://via.placeholder.com/64'" />
+            <div>
+              <h4>Rajshree</h4>
+              <div class="price">chota rajshree 10rupye</div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="download (2).jpg" alt="Cigarette" onerror="this.src='https://via.placeholder.com/64'" />
+            <div>
+              <h4>Cigarette</h4>
+              <div class="price">choti gold flake</div>
+            </div>
+          </div>
+
+        </div>
+
+        <p style="margin-top:14px;color:var(--muted);font-size:13px">हम छोटे आयोजनों के लिए थोक ऑर्डर स्वीकार करते हैं — फोन पर ऑर्डर करें या नीचे संदेश भेजें।</p>
+      </div>
+
+      <aside class="card right-col">
+        <div class="photo" style="height:320px;">
+          <!-- Big photo — this is where 'your-photo.jpg' will also appear. Replace with your real photo. -->
+          <img src="DSC_3013.JPG" alt="Owner Large Photo" onerror="this.src='https://via.placeholder.com/600x400?text=Your+Photo'" />
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px;align-items:center;justify-content:space-between">
+          <div>
+            <strong>दुकान का पता</strong>
+            <div style="color:var(--muted);font-size:13px">मंडीदीप स्टेशन रॉड</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-weight:700">फोन</div>
+            <div style="color:var(--muted);font-size:13px">9755144218</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card contact">
+      <div>
+        <h3 style="margin-top:0;color:var(--accent)">ऑर्डर या पूछताछ भेजें</h3>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="आपका नाम" required />
+          <input type="tel" id="phone" placeholder="फोन नंबर" required />
+          <textarea id="message" rows="4" placeholder="संदेश — क्या चाहिए, कब चाहिए" required></textarea>
+          <button type="submit">भेजें</button>
+        </form>
+      </div>
+
+      <div style="padding:6px;display:flex;flex-direction:column;gap:8px;justify-content:center">
+        <h4 style="margin:0 0 6px">हमारी सर्विसेज</h4>
+        <ul style="margin:0 0 8px 18px;color:var(--muted)">
+          <li>लोकल डिलीवरी</li>
+          <li>थोक खरीद पर स्पेशल रेट</li>
+          <li>ताजगी की गारंटी</li>
+        </ul>
+
+        <div style="font-size:13px;color:var(--muted)">खुले: सुबह 9 बजे — रात 9 बजे</div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> गप्पू की पान मसाला दूकान · सभी अधिकार सुरक्षित
+    </footer>
+  </main>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if(!name||!phone||!msg){ alert('कृपया सभी फील्ड भरें'); return }
+      alert('धन्यवाद ' + name + '! आपका संदेश हमारे पास पहुँच गया। हम जल्द संपर्क करेंगे।');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
